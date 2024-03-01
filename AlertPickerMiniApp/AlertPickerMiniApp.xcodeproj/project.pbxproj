@@ -13,6 +13,9 @@
 		E37A50892B8A7E0600AA8EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37A50872B8A7E0600AA8EB8 /* Main.storyboard */; };
 		E37A508B2B8A7E1000AA8EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37A508A2B8A7E1000AA8EB8 /* Assets.xcassets */; };
 		E37A508E2B8A7E1000AA8EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37A508C2B8A7E1000AA8EB8 /* LaunchScreen.storyboard */; };
+		E3B4BC5D2B9167450020CB31 /* PickerPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B4BC5C2B9167450020CB31 /* PickerPageViewController.swift */; };
+		E3B4BC5F2B9167700020CB31 /* SubmitionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B4BC5E2B9167700020CB31 /* SubmitionPageViewController.swift */; };
+		E3B4BC612B9167960020CB31 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B4BC602B9167960020CB31 /* OrderDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E37A508A2B8A7E1000AA8EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37A508D2B8A7E1000AA8EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37A508F2B8A7E1000AA8EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3B4BC5C2B9167450020CB31 /* PickerPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPageViewController.swift; sourceTree = "<group>"; };
+		E3B4BC5E2B9167700020CB31 /* SubmitionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitionPageViewController.swift; sourceTree = "<group>"; };
+		E3B4BC602B9167960020CB31 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				E37A50832B8A7E0600AA8EB8 /* SceneDelegate.swift */,
 				E37A50852B8A7E0600AA8EB8 /* ViewController.swift */,
 				E37A50872B8A7E0600AA8EB8 /* Main.storyboard */,
+				E3B4BC602B9167960020CB31 /* OrderDetailsViewController.swift */,
+				E3B4BC5E2B9167700020CB31 /* SubmitionPageViewController.swift */,
+				E3B4BC5C2B9167450020CB31 /* PickerPageViewController.swift */,
 				E37A508A2B8A7E1000AA8EB8 /* Assets.xcassets */,
 				E37A508C2B8A7E1000AA8EB8 /* LaunchScreen.storyboard */,
 				E37A508F2B8A7E1000AA8EB8 /* Info.plist */,
@@ -140,7 +149,10 @@
 			files = (
 				E37A50862B8A7E0600AA8EB8 /* ViewController.swift in Sources */,
 				E37A50822B8A7E0600AA8EB8 /* AppDelegate.swift in Sources */,
+				E3B4BC612B9167960020CB31 /* OrderDetailsViewController.swift in Sources */,
 				E37A50842B8A7E0600AA8EB8 /* SceneDelegate.swift in Sources */,
+				E3B4BC5F2B9167700020CB31 /* SubmitionPageViewController.swift in Sources */,
+				E3B4BC5D2B9167450020CB31 /* PickerPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

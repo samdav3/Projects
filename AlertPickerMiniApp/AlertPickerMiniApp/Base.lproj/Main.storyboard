@@ -79,7 +79,7 @@
         <!--Picker Page-->
         <scene sceneID="Nua-01-xlz">
             <objects>
-                <viewController id="pN5-7Q-0hB" userLabel="Picker Page" customClass="ViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pN5-7Q-0hB" userLabel="Picker Page" customClass="PickerPageViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eoI-ky-MQW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +101,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
+                                    <action selector="saveSizeBeanSelectionsButton:" destination="pN5-7Q-0hB" eventType="touchUpInside" id="v2N-nd-SZm"/>
                                     <action selector="saveSizeBeanSelectionsNext:" destination="pN5-7Q-0hB" eventType="touchUpInside" id="l82-ZC-An9"/>
                                     <segue destination="UdL-14-loe" kind="show" identifier="5" id="lNo-TY-6Wh"/>
                                 </connections>
@@ -173,7 +174,7 @@
         <!--Submition Page-->
         <scene sceneID="GNv-4f-wzc">
             <objects>
-                <viewController id="UdL-14-loe" userLabel="Submition Page" customClass="ViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UdL-14-loe" userLabel="Submition Page" customClass="SubmitionPageViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lcJ-4J-9Qk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,6 +245,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Preview Order"/>
                                 <connections>
+                                    <action selector="previewSeletions:" destination="UdL-14-loe" eventType="touchUpInside" id="LtR-8I-jhd"/>
                                     <action selector="previewSubmitions:" destination="UdL-14-loe" eventType="touchUpInside" id="9fi-dh-HbO"/>
                                 </connections>
                             </button>
@@ -306,7 +308,7 @@
         <!--Order Details-->
         <scene sceneID="YSK-wk-Qbo">
             <objects>
-                <viewController id="lyU-gn-uAE" userLabel="Order Details" customClass="ViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lyU-gn-uAE" userLabel="Order Details" customClass="OrderDetailsViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vPx-9X-9e8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,7 +378,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="lNo-TY-6Wh"/>
         <segue reference="uHe-or-aMM"/>
-        <segue reference="8w8-EY-1v9"/>
+        <segue reference="h7e-Y0-vYF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
