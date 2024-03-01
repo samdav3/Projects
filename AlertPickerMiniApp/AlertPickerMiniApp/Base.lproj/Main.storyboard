@@ -102,7 +102,6 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
                                     <action selector="saveSizeBeanSelectionsButton:" destination="pN5-7Q-0hB" eventType="touchUpInside" id="v2N-nd-SZm"/>
-                                    <action selector="saveSizeBeanSelectionsNext:" destination="pN5-7Q-0hB" eventType="touchUpInside" id="l82-ZC-An9"/>
                                     <segue destination="UdL-14-loe" kind="show" identifier="5" id="lNo-TY-6Wh"/>
                                 </connections>
                             </button>
@@ -188,6 +187,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Submit"/>
                                 <connections>
                                     <action selector="submitSelections:" destination="UdL-14-loe" eventType="touchUpInside" id="Wcz-ti-ZGJ"/>
+                                    <segue destination="lyU-gn-uAE" kind="show" id="K28-yn-luw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSE-eN-zcH">
@@ -246,7 +246,6 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Preview Order"/>
                                 <connections>
                                     <action selector="previewSeletions:" destination="UdL-14-loe" eventType="touchUpInside" id="LtR-8I-jhd"/>
-                                    <action selector="previewSubmitions:" destination="UdL-14-loe" eventType="touchUpInside" id="9fi-dh-HbO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size Displayed Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hon-1r-k2I">
@@ -295,10 +294,6 @@
                     <navigationItem key="navigationItem" id="Ni3-mg-H2k"/>
                     <connections>
                         <outlet property="additionsSelector" destination="jBM-rp-oxH" id="g6D-9I-Q1z"/>
-                        <outlet property="beanDisplayReviewText" destination="uDQ-dO-OjK" id="ev3-tb-e4P"/>
-                        <outlet property="dateDisplayReviewText" destination="mra-5l-MfG" id="ukN-eR-ZdD"/>
-                        <outlet property="reviewOrder" destination="rZB-v1-dd6" id="44w-46-72c"/>
-                        <outlet property="sizeDsiplayReviewText" destination="Hon-1r-k2I" id="sE0-6i-Kxw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXo-2z-zaA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -376,9 +371,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="K28-yn-luw"/>
         <segue reference="lNo-TY-6Wh"/>
         <segue reference="uHe-or-aMM"/>
-        <segue reference="h7e-Y0-vYF"/>
+        <segue reference="8w8-EY-1v9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
