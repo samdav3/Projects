@@ -89,7 +89,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="aboutDisplay" destination="M6C-PY-RFH" id="eMW-8Q-EKE"/>
+                        <outlet property="aboutDisplay" destination="M6C-PY-RFH" id="b58-0U-ohe"/>
+                        <outlet property="aboutInput" destination="OPo-xK-hij" id="IgZ-oZ-lr3"/>
                         <outlet property="aboutText" destination="OPo-xK-hij" id="aRL-9b-QHl"/>
                         <outlet property="mySlider" destination="roz-r0-j00" id="IWJ-xZ-DCm"/>
                         <outlet property="mySwitch" destination="kJB-JC-4QH" id="6RL-g0-2RO"/>
