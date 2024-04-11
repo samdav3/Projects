@@ -1,16 +1,13 @@
 //
-//  OrderDetailsViewController.swift
+//  ContactController.swift
 //  AlertPickerMiniApp
 //
-//  Created by Sam Davenport on 2/29/24.
+//  Created by Sam Davenport on 3/28/24.
 //
 
 import UIKit
 
-class OrderDetailsViewController: UIViewController {
-    
-    //Order Details Page
-    @IBOutlet var orderDetailsSubmitted: UILabel!
+class ContactController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

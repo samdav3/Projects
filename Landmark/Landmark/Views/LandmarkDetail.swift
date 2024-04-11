@@ -6,22 +6,29 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreLocation
+
 
 struct LandmarkDetail: View {
+    
     public var landmark: Landmark
     
+    
+    @available(iOS 14.0, *)
     var body: some View {
         
-        @Bindable var modelData = modelData
+        @Bindable var modelData = ModelData()
+        //var landmarkCoordinates: CLLocationCoordinate2D = landmark.coordinatesc
         
         ScrollView {
-            if #available(iOS 15.0, *){
-//                MapView(coordinate: landmark.coordinates)
-//                .frame(height: 300)
-//
-//                CircleImage(image: Image(landmark.image))
-//                .offset(y: -130)
-//                .padding(.bottom, -130)
+            
+            MapView(coordinate: landmark.coordinates)
+                .frame(height: 300)
+
+                CircleImage(image: Image(landmark.imageName))
+                .offset(y: -130)
+                .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
                 Text(landmark.name)
@@ -40,9 +47,10 @@ struct LandmarkDetail: View {
                     .font(.title2)
                 Text(landmark.description)
             }
+                
             .padding()
             Spacer()
-        }
+        
     }
         .navigationTitle(landmark.name)
         .navigationBarTitleDisplayMode(.inline)

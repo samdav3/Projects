@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FFCD65C2BC77EB100DC3CE5 /* OrderHiatoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCD65B2BC77EB100DC3CE5 /* OrderHiatoryViewController.swift */; };
+		E327F0E92BB631FC00B876DB /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327F0E82BB631FC00B876DB /* ContactController.swift */; };
+		E327F0ED2BB636DC00B876DB /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327F0EC2BB636DC00B876DB /* MenuController.swift */; };
+		E327F0EF2BB636F500B876DB /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E327F0EE2BB636F500B876DB /* AccountController.swift */; };
 		E37A50822B8A7E0600AA8EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A50812B8A7E0600AA8EB8 /* AppDelegate.swift */; };
 		E37A50842B8A7E0600AA8EB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A50832B8A7E0600AA8EB8 /* SceneDelegate.swift */; };
 		E37A50862B8A7E0600AA8EB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A50852B8A7E0600AA8EB8 /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FFCD65B2BC77EB100DC3CE5 /* OrderHiatoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHiatoryViewController.swift; sourceTree = "<group>"; };
+		E327F0E82BB631FC00B876DB /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		E327F0EC2BB636DC00B876DB /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		E327F0EE2BB636F500B876DB /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		E37A507E2B8A7E0600AA8EB8 /* AlertPickerMiniApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertPickerMiniApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37A50812B8A7E0600AA8EB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37A50832B8A7E0600AA8EB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E327F0EA2BB6363000B876DB /* order */ = {
+			isa = PBXGroup;
+			children = (
+				E3B4BC602B9167960020CB31 /* OrderDetailsViewController.swift */,
+				E3B4BC5E2B9167700020CB31 /* SubmitionPageViewController.swift */,
+				E3B4BC5C2B9167450020CB31 /* PickerPageViewController.swift */,
+			);
+			path = order;
+			sourceTree = "<group>";
+		};
+		E327F0EB2BB6366400B876DB /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				E327F0E82BB631FC00B876DB /* ContactController.swift */,
+				E327F0EC2BB636DC00B876DB /* MenuController.swift */,
+				E327F0EE2BB636F500B876DB /* AccountController.swift */,
+				3FFCD65B2BC77EB100DC3CE5 /* OrderHiatoryViewController.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
 		E37A50752B8A7E0600AA8EB8 = {
 			isa = PBXGroup;
 			children = (
@@ -65,10 +94,9 @@
 				E37A50812B8A7E0600AA8EB8 /* AppDelegate.swift */,
 				E37A50832B8A7E0600AA8EB8 /* SceneDelegate.swift */,
 				E37A50852B8A7E0600AA8EB8 /* ViewController.swift */,
+				E327F0EB2BB6366400B876DB /* menu */,
 				E37A50872B8A7E0600AA8EB8 /* Main.storyboard */,
-				E3B4BC602B9167960020CB31 /* OrderDetailsViewController.swift */,
-				E3B4BC5E2B9167700020CB31 /* SubmitionPageViewController.swift */,
-				E3B4BC5C2B9167450020CB31 /* PickerPageViewController.swift */,
+				E327F0EA2BB6363000B876DB /* order */,
 				E37A508A2B8A7E1000AA8EB8 /* Assets.xcassets */,
 				E37A508C2B8A7E1000AA8EB8 /* LaunchScreen.storyboard */,
 				E37A508F2B8A7E1000AA8EB8 /* Info.plist */,
@@ -147,12 +175,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E327F0ED2BB636DC00B876DB /* MenuController.swift in Sources */,
 				E37A50862B8A7E0600AA8EB8 /* ViewController.swift in Sources */,
 				E37A50822B8A7E0600AA8EB8 /* AppDelegate.swift in Sources */,
 				E3B4BC612B9167960020CB31 /* OrderDetailsViewController.swift in Sources */,
 				E37A50842B8A7E0600AA8EB8 /* SceneDelegate.swift in Sources */,
 				E3B4BC5F2B9167700020CB31 /* SubmitionPageViewController.swift in Sources */,
+				3FFCD65C2BC77EB100DC3CE5 /* OrderHiatoryViewController.swift in Sources */,
+				E327F0EF2BB636F500B876DB /* AccountController.swift in Sources */,
 				E3B4BC5D2B9167450020CB31 /* PickerPageViewController.swift in Sources */,
+				E327F0E92BB631FC00B876DB /* ContactController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

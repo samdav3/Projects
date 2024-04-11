@@ -9,22 +9,26 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    //var coordinate: CLLocationCoordinate2D
+    var coordinate: CLLocationCoordinate2D
     
     var body: some View {
         Text("Text")
-       // Map(position: .constant(.region(region)))
+        if #available(iOS 17.0, *) {
+            Map(position: .constant(.region(region)))
+        } else {
+            // Fallback on earlier versions
+        }
     }
-//    private var region: MKCoordinateRegion{
-//        MKCoordinateRegion(
-//            center: coordinate,
-//            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-//        )
-//    }
+    private var region: MKCoordinateRegion{
+        MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(position: .constant(.region(landmark.region)))
     }
 }
