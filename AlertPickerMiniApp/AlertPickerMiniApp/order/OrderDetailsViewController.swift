@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class OrderDetailsViewController: UIViewController {
     
@@ -43,9 +44,31 @@ class OrderDetailsViewController: UIViewController {
         }else if segue.identifier == "home3"{
             let homeVC = segue.destination as! ViewController
             homeVC.navigationItem.title = "Home"
+        }else if segue.identifier == "saveOrder"{
+            let orderHisVC = OrderHiatoryViewController()
+            orderHisVC.svdSize = szOrder
+            orderHisVC.svdCoffee = cfOrder
+            orderHisVC.svdCream = crmOrder
+            orderHisVC.svdFlavor = flvrOrder
+            
+            let updateAlert = UIAlertController(title: "Order Saved", message: "Your Order has been added to your Account Order History!", preferredStyle: .alert)
+            updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            self.present(updateAlert, animated: true, completion: nil)
         }
         
     }
     
-
+//    @IBAction func saveOrderBtn(_ sender: UIButton) {
+//        
+//        let orderHisVC = OrderHiatoryViewController()
+//        orderHisVC.svdSize = szOrder
+//        orderHisVC.svdCoffee = cfOrder
+//        orderHisVC.svdCream = crmOrder
+//        orderHisVC.svdFlavor = flvrOrder
+//        
+//        let updateAlert = UIAlertController(title: "Order Saved", message: "Your Order has been added to your Account Order History!", preferredStyle: .alert)
+//        updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+//        self.present(updateAlert, animated: true, completion: nil)
+//    }
+    
 }

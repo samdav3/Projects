@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+import FirebaseAppCheck
+import Foundation
 
 @main
 
@@ -16,8 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        
+        let providerFactory = AppCheckDebugProviderFactory()
+        AppCheck.setAppCheckProviderFactory(providerFactory)
+        FirebaseApp.configure()
+        _ = Firestore.firestore()
+
         return true
     }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 
