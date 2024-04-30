@@ -29,10 +29,9 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "account"{
-            let accountVC = segue.destination as! AccountController
-            accountVC.rcvdUserEmail = userEmail
-            accountVC.navigationItem.title = "Account"
+        if segue.identifier == "login"{
+            let accountVC = segue.destination as! LoginController
+            accountVC.navigationItem.title = "Login"
         } else if segue.identifier == "menu"{
             let menuVC = segue.destination as! MenuController
             menuVC.navigationItem.title = "Menu"

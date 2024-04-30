@@ -14,6 +14,8 @@ import SwiftUI
 
 class LoginController: UIViewController {
     
+    let db = Firestore.firestore()
+    
     @IBOutlet var loginEmail: UITextField!
     @IBOutlet var loginPass: UITextField!
     //let db = Firestore.firestore()
@@ -35,15 +37,36 @@ class LoginController: UIViewController {
         performSegue(withIdentifier: "login", sender: UIButton.self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) async {
         userEmail = loginEmail.text ?? ""
         if segue.identifier == "login"{
-            let nextVC = segue.destination as! ViewController
-            nextVC.navigationItem.title = "Home"
-            nextVC.userEmail = userEmail
+            let nextVC = segue.destination as! AccountController
+            
+            do{
+                let document = try await db.collection("users").document(loginEmail.text ?? "").getDocument()
+                let userPassD = document.get("password")
+                let userNameD = document.get("name")
+                let userPhoneD = document.get("phone")
+                let userAddressD = document.get("address")
+                let userCardNumD = document.get("cardNum")
+                let userCardExpD = document.get("cardExp")
+                let userCardCVVD = document.get("CVV")
+                nextVC.rcvdUserEmail = userEmail
+                nextVC.userPassD = userPassD as! String
+                nextVC.userNameD = userNameD as! String
+                nextVC.userPhoneD = userPhoneD as! String
+                nextVC.userAddressD = userAddressD as! String
+                nextVC.userCardNumD = userCardNumD as! String
+                nextVC.userCardExpD = userCardExpD as! String
+                nextVC.userCardCVVD = userCardCVVD as! String
+            }catch {
+                print("Error retrieving data or user skipped login.")
+                
+            }
+            nextVC.navigationItem.title = "Account"
         } else if segue.identifier == "skipLogin"{
-            let homeVC = segue.destination as! ViewController
-            homeVC.navigationItem.title = "Home"
+            let homeVC = segue.destination as! AccountController
+            homeVC.navigationItem.title = "Account"
         }
     }
 }

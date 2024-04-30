@@ -44,7 +44,7 @@ class OrderHiatoryViewController: UIViewController {
 //        struct OrderView: View {
 //            
 //            @State var listItems = [Item]()
-//            //            @State var addSize: String = ""
+//            //            @State var addSize: String = ""-0
 //            //            @State var addCoffee: String = ""
 //            //            @State var addCream: String = ""
 //            //            @State var addFlavor: String = ""
@@ -80,8 +80,26 @@ class OrderHiatoryViewController: UIViewController {
 //            }
 //        }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let homeVC = segue.destination as! ViewController
-        homeVC.navigationItem.title = "Home"
+        if (segue.identifier == "home"){
+            let homeVC = segue.destination as! ViewController
+            homeVC.navigationItem.title = "Home"
+        }
+        else if (segue.identifier == "orderHis=orderNew"){
+            let nextVC = segue.destination as! PickerPageViewController
+            nextVC.navigationItem.title = "Picker Page"
+        }
+        else if(segue.identifier == "menu"){
+            let menuVC = segue.destination as! MenuController
+            menuVC.navigationItem.title = "Menu"
+        }
+        else if(segue.identifier == "account"){
+            let accountVC = segue.destination as! AccountController
+            accountVC.navigationItem.title = "Account"
+        }
+        else if(segue.identifier == "contact"){
+            let contactVC = segue.destination as! ContactController
+            contactVC.navigationItem.title = "Contact"
+        }
     }
         
 }
