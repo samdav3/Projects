@@ -17,6 +17,7 @@ class AccountController: UIViewController {
     
     let db = Firestore.firestore()
     
+    
     // USER INPUT FIELDS
     // ACCOUNT
     @IBOutlet var userEmail: UITextField!
@@ -29,7 +30,7 @@ class AccountController: UIViewController {
     @IBOutlet var userCardNum: UITextField!
     @IBOutlet var userCardExp: UITextField!
     @IBOutlet var userCardCVV: UITextField!
-    var rcvdUserEmail = ""
+    public var rcvdUserEmail = ""
     var userPassD = ""
     var userNameD = ""
     var userPhoneD = ""
@@ -40,33 +41,66 @@ class AccountController: UIViewController {
     
     
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        userEmail.text = rcvdUserEmail
-        userPassword.text = userPassD
-        userName.text = userNameD
-        userPhone.text = userPhoneD
-        userAddress.text = userAddressD
-        userCardNum.text = userCardNumD
-        userCardExp.text = userCardExpD
-        userCardCVV.text = userCardCVVD
+        
+        if (rcvdUserEmail == ""){
+            print("do nothing")
+        }else{
+            Task{
+                await login()
+            }
+        }
+        
+        
         
         
     }
     
-    @IBAction func refreshBtn(_ sender: UIButton) {
-        // TEMPORARY FOR TESTING
-        userName.text = ""
-        userEmail.text = ""
-        userPassword.text = ""
-        userPhone.text = ""
-        userAddress.text = ""
-        userCardCVV.text = ""
-        userCardExp.text = ""
-        userCardNum.text = ""
-    }
+        func login() async {
+            do{
+    
+                var userPassD = ""
+                var userNameD = ""
+                var userPhoneD = ""
+                var userAddressD = ""
+                var userCardNumD = ""
+                var userCardExpD = ""
+                var userCardCVVD = ""
+    
+                let document = try await db.collection("users").document(rcvdUserEmail).getDocument()
+                if(document.exists){
+                    userPassD.append(contentsOf: document.get("password") as! String)
+                    userNameD = document.get("name") as! String
+                    userPhoneD = document.get("phone") as! String
+                    userAddressD = document.get("address") as! String
+                    userCardNumD = document.get("cardNum") as! String
+                    userCardExpD = document.get("cardExp") as! String
+                    userCardCVVD = document.get("CVV") as! String
+    
+                    userEmail.text = rcvdUserEmail
+                    userPassword.text = userPassD
+                    userName.text = userNameD
+                    userPhone.text = userPhoneD
+                    userAddress.text = userAddressD
+                    userCardNum.text = userCardNumD
+                    userCardExp.text = userCardExpD
+                    userCardCVV.text = userCardCVVD
+                    
+                }else{
+                    let updateAlert = UIAlertController(title: "Email not Found", message: "Please try again or create a New Account.", preferredStyle: .alert)
+                    updateAlert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                    self.present(updateAlert, animated: true, completion: nil)
+                }
+    
+    
+            }
+            catch {
+                print("Error retrieving data or user skipped login.")
+    
+            }
+        }
     
     
     
@@ -111,29 +145,44 @@ class AccountController: UIViewController {
     
     // NAVIGATION
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwind"{
-            let accountVC = segue.destination as! ViewController
-            accountVC.userEmail = rcvdUserEmail
-            accountVC.navigationItem.title = "Home"
+        
+        if segue.identifier == "home"{
+            let homeVC = segue.destination as! ViewController
+            homeVC.userEmail = rcvdUserEmail
+            homeVC.navigationItem.title = "Home"
         } else if segue.identifier == "menu"{
             let menuVC = segue.destination as! MenuController
+            menuVC.userEmail = rcvdUserEmail
             menuVC.navigationItem.title = "Menu"
         }
         else if segue.identifier == "contact"{
             let contactVC = segue.destination as! ContactController
+            contactVC.userEmail = rcvdUserEmail
             contactVC.navigationItem.title = "Contact"
         }
         else if segue.identifier == "order"{
             let orderVC = segue.destination as! PickerPageViewController
+            orderVC.userEmail = rcvdUserEmail
             orderVC.navigationItem.title = "Picker Page"
         }
-        
-        
+        else if segue.identifier == "orderHisory" {
+//            let layout = UICollectionViewFlowLayout()
+//            let vc = OrderHistoryCollectionViewController(collectionViewLayout: layout)
+//            present(vc, animated: true)
+            let nextVC = segue.destination as! OrderHistoryCollectionViewController
+            nextVC.userEmail = rcvdUserEmail
+            nextVC.navigationItem.title = "Order History"
+        }
         
     }
     
+    
+    
 }
+
+
 
     
     
@@ -147,5 +196,9 @@ class AccountController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+
+
+
 
 

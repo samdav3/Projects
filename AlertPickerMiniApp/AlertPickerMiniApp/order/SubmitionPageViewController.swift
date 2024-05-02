@@ -9,6 +9,7 @@ import UIKit
 
 class SubmitionPageViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    
     //Submition Page
     @IBOutlet var additionsSelector: UIPickerView!
     var additionsCreamSelectorData: [String] = [String]()
@@ -24,11 +25,14 @@ class SubmitionPageViewController: UIViewController, UIPickerViewDataSource, UIP
     var rcvdSize = ""
     @IBOutlet var receivedCoffee: UILabel!
     var rcvdCoffee = ""
+    var userEmail = ""
+    @IBOutlet var userEmailTextBox: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userEmailTextBox.text = userEmail
         receivedDate.text = rcvdDate
         receivedSize.text = rcvdSize
         receivedCoffee.text = rcvdCoffee
@@ -50,15 +54,33 @@ class SubmitionPageViewController: UIViewController, UIPickerViewDataSource, UIP
             let nextVC = segue.destination as! OrderDetailsViewController
             let creamIndex = additionsSelector.selectedRow(inComponent: 0)
             let flavorIndex = additionsSelector.selectedRow(inComponent: 1)
+            nextVC.userEmail = userEmail
             nextVC.navigationItem.title = "Order Page"
             nextVC.szOrder = rcvdSize
             nextVC.cfOrder = rcvdCoffee
             nextVC.date = rcvdDate
             nextVC.crmOrder = additionsCreamSelectorData[creamIndex]
             nextVC.flvrOrder = additionsFlavorSelectorData[flavorIndex]
-        }else if segue.identifier == "home2"{
+        }
+        else if segue.identifier == "home"{
             let homeVC = segue.destination as! ViewController
+            homeVC.userEmail = userEmail
             homeVC.navigationItem.title = "Home"
+        }
+        else if segue.identifier == "contact"{
+            let contactVC = segue.destination as! ContactController
+            contactVC.userEmail = userEmail
+            contactVC.navigationItem.title = "Contact"
+        }
+        else if segue.identifier == "menu"{
+            let menuVC = segue.destination as! MenuController
+            menuVC.userEmail = userEmail
+            menuVC.navigationItem.title = "Menu"
+    }
+        else if segue.identifier == "login"{
+            let accountVC = segue.destination as! LoginController
+            accountVC.loginEmail?.text = userEmail
+            accountVC.navigationItem.title = "Login"
         }
         
     }

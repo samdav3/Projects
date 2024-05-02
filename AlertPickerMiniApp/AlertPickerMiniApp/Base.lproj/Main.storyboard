@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +40,7 @@
             <objects>
                 <viewController id="V8c-hc-4VF" userLabel="Login" customClass="LoginController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VWw-CW-bJ3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DavCal Beans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihm-2D-pLM">
@@ -111,14 +112,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nba-kR-LTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1859" y="-1465"/>
+            <point key="canvasLocation" x="-1866" y="-1465"/>
         </scene>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="Home" id="BYZ-38-t0r" userLabel="Home" customClass="ViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start your next Coffee Order!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqf-iP-GDh">
@@ -213,7 +214,7 @@
             <objects>
                 <viewController title="Picker Page" id="pN5-7Q-0hB" userLabel="Picker Page" customClass="PickerPageViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eoI-ky-MQW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Size &amp; Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ1-ZW-nR1">
@@ -240,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="center" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="L2v-21-ldD">
-                                <rect key="frame" x="0.0" y="238.66666666666663" width="393" height="36"/>
+                                <rect key="frame" x="0.0" y="233.66666666666666" width="393" height="35.999999999999972"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bl-QE-eIn">
                                 <rect key="frame" x="130" y="766" width="132" height="52"/>
@@ -256,6 +257,13 @@
                                     <segue destination="UdL-14-loe" kind="show" identifier="next" id="nDM-Z6-Vtw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIV-Hc-quZ">
+                                <rect key="frame" x="16" y="160" width="361" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xcg-gj-elj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -270,22 +278,22 @@
                                 <barButtonItems>
                                     <barButtonItem title="Home" id="7nm-60-vdO">
                                         <connections>
-                                            <segue destination="xDf-hG-Zg1" kind="unwind" identifier="home1" unwindAction="unwindToHome:" id="VxQ-uL-38q"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="rgN-hX-Prl"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Menu" id="75e-CW-I8z">
                                         <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="p3b-sb-WA3"/>
+                                            <segue destination="6Ui-yg-CUN" kind="show" identifier="menu" id="p3b-sb-WA3"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Account" id="hnR-QJ-Ypc">
                                         <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="BQ8-Vj-eKc"/>
+                                            <segue destination="V8c-hc-4VF" kind="show" identifier="login" id="lJB-Uj-szB"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Contact Us" id="GE9-fe-dZG">
                                         <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="iu0-Sn-fr0"/>
+                                            <segue destination="JHb-Ao-51M" kind="show" identifier="contact" id="iu0-Sn-fr0"/>
                                         </connections>
                                     </barButtonItem>
                                 </barButtonItems>
@@ -295,12 +303,12 @@
                     <connections>
                         <outlet property="datePicker" destination="L2v-21-ldD" id="W6e-vb-1To"/>
                         <outlet property="sizeBeanSelector" destination="Fnk-m1-Cs8" id="YEx-8V-Duc"/>
+                        <outlet property="userEmailTextBox" destination="QIV-Hc-quZ" id="Lcr-rr-qs0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIe-hR-kLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="xDf-hG-Zg1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1084" y="568"/>
+            <point key="canvasLocation" x="-1011" y="568"/>
         </scene>
         <!--Submition Page-->
         <scene sceneID="GNv-4f-wzc">
@@ -321,7 +329,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="pN5-7Q-0hB" kind="show" id="hCg-8s-scB"/>
+                                    <segue destination="pN5-7Q-0hB" kind="show" identifier="order" id="hCg-8s-scB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date Displayed Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mra-5l-MfG">
@@ -438,6 +446,13 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kc-Vt-D1K">
+                                <rect key="frame" x="17" y="160" width="361" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rrh-k7-8MT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -448,22 +463,22 @@
                                 <barButtonItems>
                                     <barButtonItem title="Home" id="UYC-Jn-AHr">
                                         <connections>
-                                            <segue destination="KOd-Ig-b9p" kind="unwind" identifier="home2" unwindAction="unwindToHome:" id="w6n-fZ-MhY"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="SPj-9r-eKj"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Menu" id="Qi0-r5-bA9">
                                         <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="nyf-jh-tin"/>
+                                            <segue destination="6Ui-yg-CUN" kind="show" identifier="menu" id="nyf-jh-tin"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Account" id="4av-p9-P6l">
                                         <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="VZD-uU-4xT"/>
+                                            <segue destination="V8c-hc-4VF" kind="show" identifier="login" id="d3N-4h-kub"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Contact Us" id="CFq-20-lA9">
                                         <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="V56-E9-HMD"/>
+                                            <segue destination="JHb-Ao-51M" kind="show" identifier="contact" id="V56-E9-HMD"/>
                                         </connections>
                                     </barButtonItem>
                                 </barButtonItems>
@@ -479,10 +494,10 @@
                         <outlet property="reviewCream" destination="l3c-Fb-6TR" id="wbD-VP-JyT"/>
                         <outlet property="reviewFlavor" destination="8OT-gn-HRQ" id="M9Q-Wn-Tm6"/>
                         <outlet property="reviewSize" destination="Me3-ho-Oat" id="DDo-ia-8oM"/>
+                        <outlet property="userEmailTextBox" destination="0Kc-Vt-D1K" id="5TR-Xi-mtv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXo-2z-zaA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="KOd-Ig-b9p" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-191.6030534351145" y="567.6056338028169"/>
         </scene>
@@ -593,7 +608,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="pN5-7Q-0hB" kind="show" id="duK-K5-exV"/>
+                                    <segue destination="pN5-7Q-0hB" kind="show" identifier="order" id="duK-K5-exV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOc-fM-8Wf">
@@ -606,9 +621,16 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="rwo-Lo-Rpz" kind="show" identifier="saveOrder" id="Lhc-Mt-JNU"/>
+                                    <action selector="saveOrder:" destination="lyU-gn-uAE" eventType="touchUpInside" id="HiQ-1b-uWY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D13-rg-3Yh">
+                                <rect key="frame" x="16" y="160" width="361" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uwx-8A-qS8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -619,22 +641,22 @@
                                 <barButtonItems>
                                     <barButtonItem title="Home" id="V14-PY-a8e">
                                         <connections>
-                                            <segue destination="4An-aB-1D5" kind="unwind" identifier="home3" unwindAction="unwindToHome:" id="pRu-nE-CHF"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="Zc1-Li-q61"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Menu" id="BJI-7b-S1A">
                                         <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="EPd-NX-UgD"/>
+                                            <segue destination="6Ui-yg-CUN" kind="show" identifier="menu" id="EPd-NX-UgD"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Account" id="f0j-sU-iu1">
                                         <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="iCM-mb-lvq"/>
+                                            <segue destination="V8c-hc-4VF" kind="show" identifier="login" id="xZc-9L-Nw4"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Contact Us" id="4dm-dq-3KM">
                                         <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="E7d-6S-uCH"/>
+                                            <segue destination="JHb-Ao-51M" kind="show" identifier="contact" id="E7d-6S-uCH"/>
                                         </connections>
                                     </barButtonItem>
                                 </barButtonItems>
@@ -647,11 +669,10 @@
                         <outlet property="flavorOrder" destination="PEB-Qq-Kwl" id="Iul-AG-L6R"/>
                         <outlet property="orderDate" destination="X2c-vP-IkK" id="P7Q-lg-h7D"/>
                         <outlet property="sizeOrder" destination="ld1-on-wlX" id="cOc-Ib-k09"/>
-                        <outlet property="view" destination="oOc-fM-8Wf" id="HRo-mO-za8"/>
+                        <outlet property="userEmailTextBox" destination="D13-rg-3Yh" id="O9X-b1-Wfn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewq-JC-urj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="4An-aB-1D5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="759.5419847328244" y="567.6056338028169"/>
         </scene>
@@ -660,7 +681,7 @@
             <objects>
                 <viewController title="Account" id="nPq-XF-WR7" userLabel="Account" customClass="AccountController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qd9-Ra-Uqp">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESr-gH-qni">
@@ -813,7 +834,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="rwo-Lo-Rpz" kind="show" id="NCO-st-o8D"/>
+                                    <segue destination="rwo-Lo-Rpz" kind="show" identifier="orderHistory" id="9Df-9a-r4Y"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Method (optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8I-9F-XQo">
@@ -823,19 +844,6 @@
                                 <color key="textColor" systemColor="systemBrownColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSt-FT-pEZ">
-                                <rect key="frame" x="172" y="752" width="48" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="~">
-                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="refreshBtn:" destination="nPq-XF-WR7" eventType="touchUpInside" id="Hsw-77-Hac"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xUI-fc-m7w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -847,29 +855,25 @@
                                     <barButtonItem title="Home" id="6ES-Yr-b9J">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="PU2-s5-IZY" kind="unwind" identifier="unwind" unwindAction="unwindToHome:" id="zW6-dj-H0x"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="oND-Rx-xNe"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Menu" id="LQo-n0-APh">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="aeI-1o-Pnh"/>
+                                            <segue destination="6Ui-yg-CUN" kind="show" identifier="menu" id="aeI-1o-Pnh"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Order" id="eQX-zt-xnh">
                                         <connections>
-                                            <segue destination="pN5-7Q-0hB" kind="show" id="XyA-9v-XVT"/>
+                                            <segue destination="pN5-7Q-0hB" kind="show" identifier="order" id="XyA-9v-XVT"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Account" id="lYp-h8-X2o">
-                                        <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="NdY-q3-24H"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Account" id="lYp-h8-X2o"/>
                                     <barButtonItem title="Contact Us" id="9eP-Lv-nAN">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="48e-WD-Cfr"/>
+                                            <segue destination="JHb-Ao-51M" kind="show" identifier="contact" id="48e-WD-Cfr"/>
                                         </connections>
                                     </barButtonItem>
                                 </barButtonItems>
@@ -888,7 +892,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNH-d1-zEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="PU2-s5-IZY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1104.5801526717557" y="-1465.4929577464789"/>
         </scene>
@@ -897,7 +900,7 @@
             <objects>
                 <viewController title="Menu" id="6Ui-yg-CUN" userLabel="Menu" customClass="MenuController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DX1-8m-2KR">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfC-5a-cJS">
@@ -938,7 +941,7 @@
                                     <backgroundConfiguration key="background" image="coffee-4334647_1280"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Fm5-YI-ShR" kind="show" id="QPk-6o-ZMX"/>
+                                    <segue destination="Fm5-YI-ShR" kind="show" identifier="cyo" id="QPk-6o-ZMX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvO-jC-bI3">
@@ -949,7 +952,7 @@
                                     <backgroundConfiguration key="background" image="coffee-819362_1280"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="5Iy-as-nrL" kind="show" id="zSb-p9-vbg"/>
+                                    <segue destination="5Iy-as-nrL" kind="show" identifier="premade" id="zSb-p9-vbg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lh-Gp-vZK">
@@ -960,13 +963,20 @@
                                     <backgroundConfiguration key="background" image="coffee-5447420_1280"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="zqm-mc-u50" kind="show" id="ov3-qY-CM0"/>
+                                    <segue destination="zqm-mc-u50" kind="show" identifier="beans" id="ov3-qY-CM0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gR-Ud-NpF">
                                 <rect key="frame" x="118" y="715" width="157" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-jI-hN7">
+                                <rect key="frame" x="16" y="160" width="361" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemBrownColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -981,38 +991,36 @@
                                     <barButtonItem title="Home" id="JMt-8a-PgU">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="UPf-WW-LhP" kind="unwind" unwindAction="unwindToHome:" id="6yC-lP-1TC"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="gsj-Qi-zLC"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Menu" id="KYJ-Kk-il1">
-                                        <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="SW9-04-vT4"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem title="Menu" id="KYJ-Kk-il1"/>
                                     <barButtonItem title="Order" id="cOy-xy-Gox">
                                         <connections>
-                                            <segue destination="pN5-7Q-0hB" kind="show" id="dS2-GA-tdk"/>
+                                            <segue destination="pN5-7Q-0hB" kind="show" identifier="order" id="dS2-GA-tdk"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Account" id="mpp-r5-Tlc">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="6hT-ge-rXt"/>
+                                            <segue destination="V8c-hc-4VF" kind="show" identifier="login" id="8pw-e9-hiX"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Contact Us" id="I8S-Pp-0DZ">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="B7a-bI-g9K"/>
+                                            <segue destination="JHb-Ao-51M" kind="show" identifier="contact" id="B7a-bI-g9K"/>
                                         </connections>
                                     </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userEmailTextBox" destination="vwe-jI-hN7" id="VW7-IB-yG7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIi-YT-8eL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="UPf-WW-LhP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1605.3435114503816" y="-1220.4225352112676"/>
         </scene>
@@ -1021,7 +1029,7 @@
             <objects>
                 <viewController title="Contact" id="JHb-Ao-51M" userLabel="Contact Us" customClass="ContactController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rms-QX-jAz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-Ot-Sdd">
@@ -1124,29 +1132,29 @@
                                     <barButtonItem title="Home" id="MQJ-Ah-JGl">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="It8-um-7BE" kind="unwind" unwindAction="unwindToHome:" id="jvJ-cY-dnf"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="home" id="h64-0t-mkf"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Menu" id="Rl8-Fv-de3">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="fhe-7Q-kig"/>
+                                            <segue destination="6Ui-yg-CUN" kind="show" identifier="menu" id="fhe-7Q-kig"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Order" id="xp7-bi-0FH">
                                         <connections>
-                                            <segue destination="pN5-7Q-0hB" kind="show" id="txx-Tk-EJ5"/>
+                                            <segue destination="pN5-7Q-0hB" kind="show" identifier="order" id="txx-Tk-EJ5"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Account" id="mD3-t8-lHf">
                                         <color key="tintColor" systemColor="systemBrownColor"/>
                                         <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="MfH-pw-8Bc"/>
+                                            <segue destination="V8c-hc-4VF" kind="show" identifier="login" id="R0B-ZZ-tTG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Contact Us" id="yH2-Si-qhz">
                                         <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="eIl-at-40z"/>
+                                            <segue destination="JHb-Ao-51M" kind="show" identifier="contact" id="eIl-at-40z"/>
                                         </connections>
                                     </barButtonItem>
                                 </barButtonItems>
@@ -1155,26 +1163,25 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HT-im-xH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="It8-um-7BE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2657" y="-1465"/>
+            <point key="canvasLocation" x="-2668" y="-1465"/>
         </scene>
         <!--Create Your Own-->
         <scene sceneID="GfP-6W-PUe">
             <objects>
                 <viewController id="Fm5-YI-ShR" userLabel="Create Your Own" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Wf-GY-jJk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kn-ZO-R1r">
-                                <rect key="frame" x="51.999999999999993" y="219" width="79.333333333333314" height="31.333333333333343"/>
+                                <rect key="frame" x="51.999999999999993" y="214" width="79.333333333333314" height="31.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <color key="textColor" systemColor="systemBrownColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flavor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-9n-fTt">
-                                <rect key="frame" x="246" y="219" width="72" height="31.333333333333343"/>
+                                <rect key="frame" x="246" y="214" width="72" height="31.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                 <color key="textColor" systemColor="systemBrownColor"/>
                                 <nil key="highlightedColor"/>
@@ -1186,7 +1193,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="center" axis="vertical" distribution="equalCentering" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="G1e-7Q-SAS">
-                                <rect key="frame" x="37.999999999999993" y="273" width="107.33333333333331" height="159"/>
+                                <rect key="frame" x="37.999999999999993" y="268" width="107.33333333333331" height="159"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqT-xg-jaF">
                                         <rect key="frame" x="8.3333333333333357" y="8" width="91" height="23"/>
@@ -1228,7 +1235,7 @@
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="center" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-CQ-56L">
-                                <rect key="frame" x="210" y="273" width="144.66666666666663" height="159"/>
+                                <rect key="frame" x="210" y="268" width="144.66666666666663" height="159"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vanilla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xw8-ka-Bu0">
                                         <rect key="frame" x="8" y="8" width="128.66666666666666" height="23"/>
@@ -1340,41 +1347,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Ix-Nl-TXZ">
                         <centerItemGroups>
-                            <barButtonItemGroup customizationDisposition="fixed" id="sbf-LE-6Va">
-                                <barButtonItems>
-                                    <barButtonItem title="Home" id="UyY-vM-m5F">
-                                        <color key="tintColor" systemColor="systemBrownColor"/>
-                                        <connections>
-                                            <segue destination="goe-sp-bib" kind="unwind" unwindAction="unwindToHome:" id="vJc-xU-6bh"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Menu" id="iGH-6c-Hbn">
-                                        <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="rV3-wY-43n"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Order" id="Bvz-CA-kP8">
-                                        <connections>
-                                            <segue destination="pN5-7Q-0hB" kind="show" id="WvC-hb-E3L"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Account" id="qxR-Fn-6hV">
-                                        <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="4w1-yL-Eff"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Contact Us" id="hCV-ch-W04">
-                                        <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="0nH-MX-Cbf"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </barButtonItems>
-                            </barButtonItemGroup>
+                            <barButtonItemGroup customizationDisposition="fixed" id="sbf-LE-6Va"/>
                         </centerItemGroups>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jL-DX-vQF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="goe-sp-bib" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2272.5190839694656" y="-1719.7183098591549"/>
         </scene>
@@ -1383,7 +1360,7 @@
             <objects>
                 <viewController id="5Iy-as-nrL" userLabel="Pre-Made" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1IJ-FI-e1Y">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pre-Made by the Best" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oae-Li-Sa8">
@@ -1399,41 +1376,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="e75-4p-zOJ">
                         <centerItemGroups>
-                            <barButtonItemGroup customizationDisposition="fixed" id="6L5-wY-fPj">
-                                <barButtonItems>
-                                    <barButtonItem title="Home" id="lbT-tj-4gs">
-                                        <color key="tintColor" systemColor="systemBrownColor"/>
-                                        <connections>
-                                            <segue destination="Fr5-dJ-PBY" kind="unwind" unwindAction="unwindToHome:" id="Kd9-i0-hf7"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Menu" id="wNu-f5-NN7">
-                                        <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="awI-WV-hSU"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Order" id="MIV-Sj-RS3">
-                                        <connections>
-                                            <segue destination="pN5-7Q-0hB" kind="show" id="2fZ-2u-yJ3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Account" id="WSl-Uu-NVb">
-                                        <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="TG3-j8-Pdu"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Contact Us" id="3cs-Pd-g3n">
-                                        <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="X4P-0J-poc"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </barButtonItems>
-                            </barButtonItemGroup>
+                            <barButtonItemGroup customizationDisposition="fixed" id="6L5-wY-fPj"/>
                         </centerItemGroups>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asn-7Z-2tD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Fr5-dJ-PBY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2974" y="-1220"/>
         </scene>
@@ -1442,7 +1389,7 @@
             <objects>
                 <viewController id="zqm-mc-u50" userLabel="Beans" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hul-3l-O9O">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhJ-Pb-2ce">
@@ -1492,125 +1439,275 @@
                     </view>
                     <navigationItem key="navigationItem" id="5tt-sy-Cfe">
                         <centerItemGroups>
-                            <barButtonItemGroup customizationDisposition="fixed" id="ul4-bn-dLF">
-                                <barButtonItems>
-                                    <barButtonItem title="Home" id="yDo-1r-on7">
-                                        <color key="tintColor" systemColor="systemBrownColor"/>
-                                        <connections>
-                                            <segue destination="6bR-dh-tBG" kind="unwind" unwindAction="unwindToHome:" id="63g-ha-F99"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Menu" id="eX9-Y3-aIT">
-                                        <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" id="okR-Zi-Pwu"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Order" id="291-J0-u8l">
-                                        <connections>
-                                            <segue destination="pN5-7Q-0hB" kind="show" id="XFK-99-R4l"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Account" id="s0E-0A-6u5">
-                                        <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" id="sBC-9K-UGP"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Contact Us" id="Uw0-zj-dZR">
-                                        <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" id="q03-DP-jTw"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </barButtonItems>
-                            </barButtonItemGroup>
+                            <barButtonItemGroup customizationDisposition="fixed" id="ul4-bn-dLF"/>
                         </centerItemGroups>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JG0-kQ-QLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="6bR-dh-tBG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2275.36231884058" y="-710.49107142857144"/>
         </scene>
         <!--Orders-->
         <scene sceneID="wEI-fh-lKf">
             <objects>
-                <viewController title="Orders" id="rwo-Lo-Rpz" customClass="OrderHiatoryViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Orders" id="rwo-Lo-Rpz" customClass="OrderHistoryViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RBl-A4-uPJ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZx-A1-UER">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izB-8c-N22">
                                 <rect key="frame" x="16" y="103" width="361" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lC-Mv-W46">
-                                <rect key="frame" x="16" y="212" width="361" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="NfC-kS-mlE">
+                                <rect key="frame" x="0.0" y="172" width="393" height="663"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gNa-0g-rEi">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order1" id="r0b-k4-Rmp">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qjj-eY-gFD">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thj-oP-w4z">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order2" id="61S-w3-kjV">
+                                        <rect key="frame" x="16" y="59" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sAy-KJ-Tcc">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VxW-Ho-bLq">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order3" id="HMR-2q-l7z">
+                                        <rect key="frame" x="16" y="118" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7fu-Mz-lRV">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOY-8V-xx5">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order4" id="qPj-ed-5HA">
+                                        <rect key="frame" x="16" y="177" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fVh-Pj-dVZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VFy-6A-9qx">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order5" id="AUv-lV-rAd">
+                                        <rect key="frame" x="16" y="236" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gye-wA-bP0">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itM-gv-0Be">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order6" id="Trd-BC-3Xg">
+                                        <rect key="frame" x="16" y="295" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ivh-qz-97N">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYc-wT-fn8">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order7" id="1gI-jt-Fnb">
+                                        <rect key="frame" x="16" y="354" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ygp-lf-rHb">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNS-hb-Znk">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order8" id="eRQ-X9-RMd">
+                                        <rect key="frame" x="16" y="413" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TH6-P8-3Sa">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhd-o8-o4d">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order9" id="WfL-hE-m6J">
+                                        <rect key="frame" x="16" y="472" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dqn-Yi-b0a">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJW-17-oQk">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="order10" id="UkV-ik-uxX">
+                                        <rect key="frame" x="16" y="531" width="361" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D76-pq-DtB">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osU-QD-CWm">
+                                                    <rect key="frame" x="8" y="7" width="345" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                        <edgeInsets key="layoutMargins" top="9" left="8" bottom="8" right="8"/>
+                                        <size key="customSize" width="361" height="49"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qiG-sU-abq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8PO-Eb-LBK">
-                        <centerItemGroups>
-                            <barButtonItemGroup customizationDisposition="fixed" id="Lte-p7-ffP">
-                                <barButtonItems>
-                                    <barButtonItem title="Home" id="F5b-SU-e5w">
-                                        <color key="tintColor" systemColor="systemBrownColor"/>
-                                        <connections>
-                                            <segue destination="LzX-HB-K5k" kind="unwind" identifier="home" unwindAction="unwindToHome:" id="hmq-cQ-DSj"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Menu" id="x5g-hn-rab">
-                                        <color key="tintColor" systemColor="systemBrownColor"/>
-                                        <connections>
-                                            <segue destination="6Ui-yg-CUN" kind="show" identifier="menu" id="BK3-KC-yPY"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Order" id="BAm-yH-26S">
-                                        <connections>
-                                            <segue destination="pN5-7Q-0hB" kind="show" identifier="orderHis-orderNew" id="WhV-40-wfv"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Account" id="AY8-8K-IMf">
-                                        <connections>
-                                            <segue destination="nPq-XF-WR7" kind="show" identifier="account" id="X2U-VN-4gh"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Contact Us" id="arN-H0-eP2">
-                                        <color key="tintColor" systemColor="systemBrownColor"/>
-                                        <connections>
-                                            <segue destination="JHb-Ao-51M" kind="show" identifier="contact" id="BrW-bh-G6K"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </barButtonItems>
-                            </barButtonItemGroup>
-                        </centerItemGroups>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="rCz-u4-YfP"/>
                     <connections>
-                        <outlet property="displayOrder" destination="1lC-Mv-W46" id="dzK-gh-KEv"/>
+                        <outlet property="order1" destination="Thj-oP-w4z" id="WYp-r2-3cg"/>
+                        <outlet property="order10" destination="osU-QD-CWm" id="P4A-my-xLp"/>
+                        <outlet property="order2" destination="VxW-Ho-bLq" id="cdx-C6-Gdo"/>
+                        <outlet property="order3" destination="NOY-8V-xx5" id="M17-wR-Pw6"/>
+                        <outlet property="order4" destination="VFy-6A-9qx" id="y7d-cH-Gyv"/>
+                        <outlet property="order5" destination="itM-gv-0Be" id="zmc-wu-tgm"/>
+                        <outlet property="order6" destination="jYc-wT-fn8" id="ynJ-pO-UBe"/>
+                        <outlet property="order7" destination="HNS-hb-Znk" id="6vR-Js-D2r"/>
+                        <outlet property="order8" destination="dhd-o8-o4d" id="J2p-9D-sPC"/>
+                        <outlet property="order9" destination="eJW-17-oQk" id="9Ge-q4-6I9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Mu-Os-0fD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="LzX-HB-K5k" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-240.45801526717557" y="-2085.211267605634"/>
+            <point key="canvasLocation" x="-382.44274809160305" y="-1465.4929577464789"/>
+        </scene>
+        <!--Order History-->
+        <scene sceneID="UI2-ak-DDE">
+            <objects>
+                <collectionViewController title="Order History" id="6yx-oL-Xh0" customClass="OrderHistoryCollectionViewController" customModule="AlertPickerMiniApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="X2u-jG-bk5"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ep0-I2-q2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-851" y="-2435"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NCO-st-o8D"/>
-        <segue reference="nZ7-7T-0J5"/>
-        <segue reference="ot2-jm-fgd"/>
-        <segue reference="za5-gE-Cxj"/>
+        <segue reference="48e-WD-Cfr"/>
+        <segue reference="aeI-1o-Pnh"/>
+        <segue reference="VwG-zZ-Ajh"/>
         <segue reference="6Da-Qg-R2x"/>
         <segue reference="fhg-Xf-71p"/>
-        <segue reference="uHe-or-aMM"/>
+        <segue reference="XyA-9v-XVT"/>
+        <segue reference="oND-Rx-xNe"/>
+        <segue reference="R0B-ZZ-tTG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="coffee-1154353_1280" width="1280" height="850"/>

@@ -5,155 +5,23 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.AddressBreakpoint">
          <BreakpointContent
-            uuid = "9980250A-0288-4542-AF8B-CB85915459FF"
-            shouldBeEnabled = "Yes"
+            uuid = "8B6A7C2A-EDF1-4801-A10D-6E36180AB82B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AlertPickerMiniApp/LoginController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AlertPickerMiniApp/LoginController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
+            symbolName = "*0x10ae51d17">
             <Locations>
                <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - 57b5b89812ca3662"
+                  uuid = "8B6A7C2A-EDF1-4801-A10D-6E36180AB82B - ae1aec35635ddaef"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
+                  symbolName = "_dispatch_queue_wakeup"
+                  moduleName = "libdispatch.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "1943">
-               </Location>
-               <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - 498471fd82879231"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "61">
-               </Location>
-               <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - ad8fc81ef9b3f264"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "831">
-               </Location>
-               <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - 8e84c1de2a045c67"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "94">
-               </Location>
-               <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - 57b5b89812ca3643"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "1705">
-               </Location>
-               <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - 498471fd82879210"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "61">
-               </Location>
-               <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - ad8fc81ef9b3f245"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "831">
-               </Location>
-               <Location
-                  uuid = "D4A66A8E-5739-4612-8300-EFD4CA2E25EF - 8e84c1de2a045c46"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for AlertPickerMiniApp.LoginController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) async -&gt; ()"
-                  moduleName = "AlertPickerMiniApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Library/Mobile%20Documents/com~apple~CloudDocs/OneDrive-MCC/MAD-157%20IOS/Projects/AlertPickerMiniApp/AlertPickerMiniApp/LoginController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "94">
+                  offsetFromSymbolStart = "448">
                </Location>
             </Locations>
          </BreakpointContent>

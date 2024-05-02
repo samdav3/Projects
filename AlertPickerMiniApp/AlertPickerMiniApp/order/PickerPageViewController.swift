@@ -15,11 +15,14 @@ class PickerPageViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet var sizeBeanSelector: UIPickerView!
     var sizeSelectorData: [String] = [String]()
     var beanSelectorData: [String] = [String]()
+    var userEmail = ""
+    @IBOutlet var userEmailTextBox: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userEmailTextBox.text = userEmail
         
         //Picker Page
         dateFormatter.dateStyle = .medium
@@ -41,13 +44,31 @@ class PickerPageViewController: UIViewController, UIPickerViewDataSource, UIPick
             let sizeIndex = sizeBeanSelector.selectedRow(inComponent: 0)
             let beanIndex = sizeBeanSelector.selectedRow(inComponent: 1)
             let date = dateFormatter.string(from: datePicker.date)
+            nextVC.userEmail = userEmail
             nextVC.navigationItem.title = "Submition Page"
             nextVC.rcvdDate = date
             nextVC.rcvdSize = sizeSelectorData[sizeIndex]
             nextVC.rcvdCoffee = beanSelectorData[beanIndex]
-        } else if segue.identifier == "home1"{
+        } 
+        else if segue.identifier == "home"{
             let homeVC = segue.destination as! ViewController
+            homeVC.userEmail = userEmail
             homeVC.navigationItem.title = "Home"
+        }
+        else if segue.identifier == "contact"{
+            let contactVC = segue.destination as! ContactController
+            contactVC.userEmail = userEmail
+            contactVC.navigationItem.title = "Contact"
+        }
+        else if segue.identifier == "menu"{
+            let menuVC = segue.destination as! MenuController
+            menuVC.userEmail = userEmail
+            menuVC.navigationItem.title = "Menu"
+    }
+        else if segue.identifier == "login"{
+            let accountVC = segue.destination as! LoginController
+            accountVC.loginEmail?.text = userEmail
+            accountVC.navigationItem.title = "Login"
         }
     }
         
