@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+private let reuseIdentifier = "Cell"
 
 class OrderHistoryViewController: UIViewController {
     
@@ -20,16 +21,16 @@ class OrderHistoryViewController: UIViewController {
     var userEmail = ""
     
     
-    @IBOutlet var order1: UITextField!
-    @IBOutlet var order2: UITextField!
-    @IBOutlet var order3: UITextField!
-    @IBOutlet var order4: UITextField!
-    @IBOutlet var order5: UITextField!
-    @IBOutlet var order6: UITextField!
-    @IBOutlet var order7: UITextField!
-    @IBOutlet var order8: UITextField!
-    @IBOutlet var order9: UITextField!
-    @IBOutlet var order10: UITextField!
+//    @IBOutlet var order1: UITextField!
+//    @IBOutlet var order2: UITextField!
+//    @IBOutlet var order3: UITextField!
+//    @IBOutlet var order4: UITextField!
+//    @IBOutlet var order5: UITextField!
+//    @IBOutlet var order6: UITextField!
+//    @IBOutlet var order7: UITextField!
+//    @IBOutlet var order8: UITextField!
+//    @IBOutlet var order9: UITextField!
+//    @IBOutlet var order10: UITextField!
     
 
     override func viewDidLoad() {
@@ -37,6 +38,16 @@ class OrderHistoryViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            
+            return 10
+        }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+            return cell
+        }
     
     func loadHistory() async {
         do{
@@ -53,7 +64,7 @@ class OrderHistoryViewController: UIViewController {
                 orderCrm = document.get("cream") as! String
                 orderFlvr = document.get("flavor") as! String
 //     PUT ORDER HISTORY FROM DATABASE IN UI TETFIELDS
-                order1.text = "\(document.documentID) \(orderSz) \(orderCf) \(orderCrm) \(orderFlvr)"
+                //order1.text = "\(document.documentID) \(orderSz) \(orderCf) \(orderCrm) \(orderFlvr)"
 //                userSz.text = orderSz
 //                userCf.text = orderCf
 //                userCrm.text = orderCrm

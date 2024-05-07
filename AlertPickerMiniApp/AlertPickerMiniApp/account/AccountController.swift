@@ -171,7 +171,7 @@ class AccountController: UIViewController {
 //            let layout = UICollectionViewFlowLayout()
 //            let vc = OrderHistoryCollectionViewController(collectionViewLayout: layout)
 //            present(vc, animated: true)
-            let nextVC = segue.destination as! OrderHistoryCollectionViewController
+            let nextVC = segue.destination as! OrderHistoryViewController
             nextVC.userEmail = rcvdUserEmail
             nextVC.navigationItem.title = "Order History"
         }
