@@ -1,10 +1,10 @@
-////
-////  OrderHistoryCollectionViewController.swift
-////  AlertPickerMiniApp
-////
-////  Created by student on 5/1/24.
-////
 //
+//  OrderHistoryCollectionViewController.swift
+//  AlertPickerMiniApp
+//
+//  Created by student on 5/1/24.
+//
+
 //import UIKit
 //import FirebaseFirestore
 //
@@ -42,7 +42,9 @@
 //
 //        // Register cell classes
 //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-//
+//        Task{
+//            await loadHistory()
+//        }
 //        // Do any additional setup after loading the view.
 //    }
 //    
@@ -66,15 +68,17 @@
 //            var orderCrm = ""
 //            var orderFlvr = ""
 //
-//            let document = try await db.collection("users").document(userEmail).collection("orders").document("").getDocument()
-//            var orderDate = document.documentID
-//            if(document.exists){
+//            let orderCollection = db.collection("users").document(userEmail).collection("orders")
+//            let documentOrders = try await orderCollection.document().getDocument()
+//            let orderDate = documentOrders.documentID
+//            let document = try await orderCollection.document(orderDate).getDocument()
+//            if(documentOrders.exists){
 //                orderSz = document.get("size") as! String
 //                orderCf = document.get("coffee") as! String
 //                orderCrm = document.get("cream") as! String
 //                orderFlvr = document.get("flavor") as! String
 ////     PUT ORDER HISTORY FROM DATABASE IN UI TETFIELDS
-//                order1.text = "\(document.documentID) \(orderSz) \(orderCf) \(orderCrm) \(orderFlvr)"
+//                order1.text = "\(documentOrders.documentID) \(orderSz) \(orderCf) \(orderCrm) \(orderFlvr)"
 ////                userSz.text = orderSz
 ////                userCf.text = orderCf
 ////                userCrm.text = orderCrm

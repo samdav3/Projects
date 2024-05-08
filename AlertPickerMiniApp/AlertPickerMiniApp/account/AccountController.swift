@@ -71,7 +71,7 @@ class AccountController: UIViewController {
     
                 let document = try await db.collection("users").document(rcvdUserEmail).getDocument()
                 if(document.exists){
-                    userPassD.append(contentsOf: document.get("password") as! String)
+                    userPassD = document.get("password") as! String
                     userNameD = document.get("name") as! String
                     userPhoneD = document.get("phone") as! String
                     userAddressD = document.get("address") as! String
@@ -167,7 +167,7 @@ class AccountController: UIViewController {
             orderVC.userEmail = rcvdUserEmail
             orderVC.navigationItem.title = "Picker Page"
         }
-        else if segue.identifier == "orderHisory" {
+        else if segue.identifier == "orderHistory" {
 //            let layout = UICollectionViewFlowLayout()
 //            let vc = OrderHistoryCollectionViewController(collectionViewLayout: layout)
 //            present(vc, animated: true)

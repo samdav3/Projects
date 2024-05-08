@@ -45,7 +45,7 @@ class OrderDetailsViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "new order"{
+        if segue.identifier == "order"{
             let newVC = segue.destination as! PickerPageViewController
             newVC.userEmail = userEmail
             newVC.navigationItem.title = "Picker Page"
@@ -74,13 +74,13 @@ class OrderDetailsViewController: UIViewController {
     
     func saveOrder() async {
         do{
-            _ = try await db.collection("users").document("\(userEmail)").collection("orders").document("\(date)").setData([
+            _ = try await db.collection("users").document("\(userEmail)").collection("orders").document("\(cfOrder)").setData([
                 "size": szOrder,
                 "coffee": cfOrder,
                 "cream": crmOrder,
                 "flavor": flvrOrder
             ])
-            let docID = db.collection("users").document("\(userEmail)").collection("orders").document("\(date)").documentID
+            let docID = db.collection("users").document("\(userEmail)").collection("orders").document("\(cfOrder)").documentID
             print("Document added with ID \(docID)")
             
             let updateAlert = UIAlertController(title: "Order Saved", message: "Your Order has been added to your Accounts Order History!", preferredStyle: .alert)
